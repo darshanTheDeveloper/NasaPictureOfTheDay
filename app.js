@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 
 const apiKey = '2KeBSPaOtlvHMLiPup7X7oRfG0LO8ejkGc2WvpGd'
 const app = express()
+const port = 3000
 
 app.use(express.static('public'))
 
@@ -22,4 +23,4 @@ app.get('/picture',async (req,res)=>{
 }) 
 
 
-app.listen(3000)
+app.listen(process.env.PORT || port)
